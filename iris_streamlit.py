@@ -111,3 +111,37 @@ with st.expander("Expand This"):
     color = st.color_picker('Where is your favorite color?')
     st.write(color)
     st.write(type(color))
+
+st.write('**More info on plotting features in Streamlit!**')
+with st.expander('Expand This'):
+    df2 = pd.DataFrame((np.random.rand(50) * 3) - 1.5)
+    df3 = pd.DataFrame({'idx' : ['A', 'B', 'C'],
+    'stat1' : np.random.rand(3),
+    'stat2' : np.random.rand(3)}).set_index('idx')
+    st.write("Built-in Streamlit Charts (Usable with pd.DataFrame)")
+
+    st.code("st.line_chart(df)")
+    st.line_chart(df2)
+
+    st.code("st.areas_chart(df)")
+    st.area_chart(df2)
+
+    st.code("st.bar_chart(df)")
+    st.bar_chart(df3)
+
+    st.write('Also compatible with:')
+
+    st.write("- Altair")
+    st.code("st.altair_chart(altair_figure)")
+
+    st.write("- Vega-Lite")
+    st.code("st.vega_lite_chart(vega_declaratives)")
+
+    st.write("- Plotly")
+    st.code("st.plotly_chart(plotly_figure)")
+
+    st.write("- Bokeh")
+    st.code("st.bokeh_chart(bokeh_figure)")
+
+    st.write("- GraphViz")
+    st.code("st.graphviz_chart(graphvis_spec)")
