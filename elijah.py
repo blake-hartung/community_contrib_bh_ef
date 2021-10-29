@@ -72,7 +72,7 @@ initial_view_state={
     "zoom": 12,
     'pitch': 50}
 
-st.pydeck_chart(pdk.Deck(layers=[layers], initial_view_state=initial_view_state))
+st.pydeck_chart(pdk.Deck(map_style='light',layers=[layers], initial_view_state=initial_view_state))
         
 
 
