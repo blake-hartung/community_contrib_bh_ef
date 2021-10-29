@@ -98,7 +98,7 @@ with st.expander("Expand This"):
     input_text = st.text_input('Write anything you want here')
     st.write(type(input_text))
 
-    number_input = st.number_input("Pick a number between 1 - 10:", 0, 10)
+    number_input = st.number_input("Guess a number between 1 - 10:", 0, 10)
     if number_input == 7:
         st.write('Correct!')
     else:
@@ -115,9 +115,9 @@ with st.expander("Expand This"):
 st.write('**More info on plotting features in Streamlit!**')
 with st.expander('Expand This'):
     df2 = pd.DataFrame((np.random.rand(50) * 3) - 1.5)
-    df3 = pd.DataFrame({'idx' : ['A', 'B', 'C'],
-    'stat1' : np.random.rand(3),
-    'stat2' : np.random.rand(3)}).set_index('idx')
+    df3 = pd.DataFrame({'idx': ['A', 'B', 'C'],
+                        'stat1': np.random.rand(3),
+                        'stat2': np.random.rand(3)}).set_index('idx')
     st.write("Built-in Streamlit Charts (Usable with pd.DataFrame)")
 
     st.code("st.line_chart(df)")
